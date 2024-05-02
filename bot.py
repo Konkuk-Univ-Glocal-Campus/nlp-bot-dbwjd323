@@ -1,26 +1,24 @@
 import random
 
-# This list contains the random responses (you can add your own or translate them into your own language too)
-random_responses = ["That is quite interesting, please tell me more.",
-                    "I see. Do go on.",
-                    "Why do you say that?",
-                    "Funny weather we've been having, isn't it?",
-                    "Let's change the subject.",
-                    "Did you catch the game last night?"]
+# 랜덤 응답 리스트에 한국어 응답을 추가합니다.
+random_responses = ["그거 정말 흥미로워요. 더 말씀해주세요.",
+                    "그렇군요. 계속 이야기해주세요.",
+                    "왜 그렇게 말하시나요?",
+                    "요즘 날씨 정말 이상하죠?",
+                    "주제를 바꿔볼까요?",
+                    "어제 경기 보셨나요?"]
 
-print("Hello, I am Marvin, the simple robot.")
-print("You can end this conversation at any time by typing 'bye'")
-print("After typing each answer, press 'enter'")
-print("How are you today?")
+print("안녕하세요, 저는 Marvin이라고 합니다. 단순한 로봇입니다.")
+print("언제든지 '안녕'을 입력하여 대화를 종료할 수 있습니다.")
+print("각 응답을 입력한 후 '엔터' 키를 눌러주세요.")
+print("오늘은 어떠신가요?")
 
 while True:
-    # wait for the user to enter some text
     user_input = input("> ")
-    if user_input.lower() == "bye":
-        # if they typed in 'bye' (or even BYE, ByE, byE etc.), break out of the loop
+    if user_input == "안녕":
         break
     else:
-        response = random.choices(random_responses)[0]
+        response = random.choice(random_responses)
     print(response)
 
-print("It was nice talking to you, goodbye!")
+print("대화해 주셔서 감사합니다. 안녕히 가세요!")
